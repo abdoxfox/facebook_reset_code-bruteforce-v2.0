@@ -8,8 +8,12 @@
 :المتطلبات
 
 
-pip install cookiejar 
+pip install cookiejar
+
 pip install urllib.request
+
 pip install requests
+
 pip install bs4 
+
 pip install colorama
