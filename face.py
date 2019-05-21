@@ -2,7 +2,6 @@
 
 import sys 
 from urllib.request import urlopen
-from mechanize import *
 import requests
 from bs4 import *
 from colorama import Fore, Back, Style 
