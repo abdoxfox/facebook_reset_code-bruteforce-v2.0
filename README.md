@@ -8,8 +8,6 @@
 :المتطلبات
 
 
-pip install cookiejar
-
 pip install urllib.request
 
 pip install requests
