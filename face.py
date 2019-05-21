@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
 import sys 
-import cookiejar as cookielib
 from urllib.request import urlopen
 from mechanize import *
 import requests
 from bs4 import *
 from colorama import Fore, Back, Style 
-#import mechanicalsoup
+
 
 
 #genarating code to use it for brute forcing
