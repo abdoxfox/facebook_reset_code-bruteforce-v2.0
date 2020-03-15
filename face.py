@@ -55,7 +55,7 @@ def function(passw):
 		div=i.get_text()
 		lst.append(div)
 	for j in lst:
-		if j =='HIDE'and 'SHOW'and 'Continue'and 'Skip' :
+		if 'HIDE'and 'SHOW'and 'Continue'and 'Skip' in j:
 			print('\033[1;32;40m \npassword is : ',passw)
 			webbrowser.open(r)
 			sys.exit(1)
