@@ -8,15 +8,15 @@ from colorama import Fore, Back, Style
 import webbrowser
 
 
-
-#genarating code to use it for brute forcing
-first_code = int(input(Back.BLUE+"Insert First Code: "))
-
-last_code = int(input("Insert Last Code: "))
 print('''
     ============ Menu ==============
     1- Reset Code Facebook 
     0- To Exit''')
+#genarating code to use it for brute forcing
+first_code = int(input(Back.BLUE+"Insert First Code: "))
+
+last_code = int(input("Insert Last Code: "))
+
 with open ('codes.txt','w') as f:
 	for i in range(first_code,last_code):
 		if len(str(i))<=5:
