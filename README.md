@@ -8,7 +8,6 @@
 :المتطلبات
 
 
-pip install urllib.request
 
 pip install requests
 
