@@ -5,6 +5,7 @@ from urllib.request import urlopen
 import requests
 from bs4 import *
 from colorama import Fore, Back, Style 
+import webbrowser
 
 
 
